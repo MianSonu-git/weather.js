@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- font icon cdn awesome -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- tap icon -->
+    <link rel="shortcut icon" href="../images/day.png" type="image/x-icon">
+    <!-- css style sheet link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- boostraps cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid section1">
+        <div class="row rowsection">
+            <div class="col-md-6 col-lg-6 col-sm-12 colsection">
+                <section class="form_section">
+                    <form method="post">
+                        <div class="form-outline">
+                            <label class="form-label label" for="form12">City Name:</label>
+                            <input type="text" id="form12" class="form-control" name="cityName">
+                          </div>
+                        <button type="submit" class="btn btn-lg search mt-3">Search</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+<!-- Weather side -->
+        <div class="col-md-6 col-lg-6 col-sm-12  colsection">
+            <div class="city">
+                <div class="titles">
+                    Weather Due
+                </div>
+                <h3 class="location" id="name">
+                  <%= data.name%>
+                </h3>
+                <h5 class="description" id="discription">
+                    The Temprature is 12.4 Ca
+                </h5>
+            </div>
+            <div class="otherDetails">
+                <div class="card"> <span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                    <div class="title">
+                        <p id="cityOrCountryJS"><%= data.name%></p>
+                    </div>
+                    <div class="temp" id="temp"><%= data.main.temp %></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">clouds</div>
+                            <div class="value" id="clouds"><%= data.clouds.all%></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Pressure</div>
+                            <div class="value" id="pressure"><%= data.main.pressure%></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Winds</div>
+                            <div class="value" id="fire"><%= data.wind.speed%></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card"> <span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                    <div class="title">
+                        <p>Sydney</p>
+                    </div>
+                    <div class="temp">+20<sup>&deg;</sup></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="header">General</div>
+                            <div class="value">Sunny</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Air pollution</div>
+                            <div class="value">47</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="header">Fire</div>
+                            <div class="value">No</div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-sm">
+           
+        </div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <!-- Option 2: Separate Popper and Bootstrap JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

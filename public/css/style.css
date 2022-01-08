@@ -1,0 +1,155 @@
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.section1{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+}
+.rowsection{
+    width: 100%;
+    height: 100vh;
+    display: inline-flex;
+    justify-content: center;
+}
+.colsection{
+    width: 50%;
+    height: 100vh;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.titles{
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-variant: normal;
+    color: #FF6363;
+    font-weight: bolder;
+}
+.city{
+    padding: 7% 14%;
+    margin: 2% 4%;
+}
+.location{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-variant: normal;
+    color: #FF6363;
+    font-weight: bold;
+}
+.description{
+    font-size: 1.2rem;
+    font-family: 'Courier New';
+    font-style: italic;
+    font-variant: normal;
+    color: #B983FF;
+}
+
+/* Form section */
+
+.form_section{
+    text-align: center;
+    position: relative;
+    top: 35vh;
+}
+.label{
+    font-size: 1.5rem;
+    color: #FF6363;
+    font-weight: bold;
+}
+.search {
+    background-color: #FF6363 !important;
+    color: white !important;
+    width: 100%;
+    padding: 7% 15%;
+    margin: 7% auto;
+}
+.search:hover {
+    background-color: white !important;
+    color: #FF6363  !important;
+    border: 1px solid #FF6363 ;
+}
+/* weather card */
+
+@media(max-width:767px) {
+    .container {
+        height: fit-content;
+    }
+}
+
+.weather {
+    width: 77%;
+}
+
+@media(max-width:767px) {
+    .weather {
+        width: 100%;
+    }
+}
+
+.card {
+    padding: 1rem;
+    margin: 1.5rem 4vw;
+    border-radius: 1rem;
+    background-color: rgba(238, 237, 237, 0.22);
+    border-color: rgba(238, 237, 237, 0.22);
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    .card {
+        margin: 1.5rem;
+    }
+}
+
+.title {
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.title p {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.temp {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.header {
+    color: #FF6363;
+}
+
+.col-4 {
+    padding: 0 0.2rem;
+}
+
+.icon {
+    align-self: flex-end;
+    margin-right: -2.5rem;
+    margin-top: -2rem;
+    z-index: 999;
+}
+
+.icon img {
+    width: 5rem;
+}
