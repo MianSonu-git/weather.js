@@ -5,7 +5,9 @@ var datas ={
 
 // call express module 
 var axios = require("axios").default;
+
 const bodyParser = require("body-parser");
+
 const express = require("express");
 
 const app = express();
@@ -56,6 +58,8 @@ app.get("/",(req,res)=>{
         const {main,weather,name,coord,clouds,wind}= items;
         // const iconpath = 'http://openweathermap.org/img/wn/'+items.weather.icon +'@2x.png';
         res.render(path,{data:{main:main,weather:weather[0],name,clouds:clouds,wind:wind,extention:"@2x.png"}});
+    }).catch(err =>{
+        res.sendFile(__dirname + "/error/error.html");
     })
 })
 //post method
@@ -71,10 +75,9 @@ app.post("/",(req,res)=>{
         // const iconpath = 'http://openweathermap.org/img/wn/'+ items.weather[0].icon +'@2x.png';
         //     console.log(items.weather[0].icon);
             res.render(path,{data:{main:main,weather:weather[0],name,clouds:clouds,wind:wind,extention:"@2x.png"}});
+        }).catch(err =>{
+            res.sendFile(__dirname + "/error/error.html");
         })
-    }
-    else{
-        console.log("Plz enter some city name");
     }
 })
 

@@ -3,9 +3,9 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "run",
+			"script": "start",
 			"problemMatcher": [],
-			"label": "npm: run",
+			"label": "npm: start",
 			"detail": "nodemon",
 			"group": {
 				"kind": "build",
